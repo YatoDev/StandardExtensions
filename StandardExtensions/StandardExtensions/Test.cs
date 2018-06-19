@@ -10,7 +10,6 @@ namespace StandardExtensions
     {
         public static void TestAll()
         {
-            string str = null;
         }
     }
 }

@@ -36,5 +36,10 @@ namespace StandardExtensions
 
             return obj;
         }
+
+        public static bool IsDefault<T>(this T obj) where T : class
+        {
+            return obj == default(T);
+        }
     }
 }
