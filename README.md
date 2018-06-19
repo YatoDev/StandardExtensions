@@ -37,7 +37,7 @@ We build this library with the .Net Standard 1.0 and thats why it supports all .
 
 ### Contribute
 
-You can contribute to this project buy fixing Typos, Documentation and by adding more useful general purpose extension methods.
+You can contribute to this project by fixing Typos, Documentation and by adding more useful general purpose extension methods.
 
 ### License
 
