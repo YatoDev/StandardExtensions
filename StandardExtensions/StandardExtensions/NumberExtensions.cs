@@ -6,6 +6,14 @@ namespace StandardExtensions
 {
     public static class NumberExtensions
     {
+        /// <summary>
+        /// Clamps a number to a specific minimum and maximum value
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="value">The value.</param>
+        /// <param name="min">The minimum.</param>
+        /// <param name="max">The maximum.</param>
+        /// <returns></returns>
         public static T Clamp<T>(this T value, T min, T max) where T : IComparable<T>
         {
             int order = value.CompareTo(min);
@@ -24,9 +32,18 @@ namespace StandardExtensions
             }
         }
 
-        public static T Limit<T>(this T value, T min, T max) where T : IComparable<T>
+        /// <summary>
+        /// Limits a number to not exceed a specific maximum
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="value">The value.</param>
+        /// <param name="max">The maximum.</param>
+        /// <returns></returns>
+        public static T Limit<T>(this T value, T max) where T : IComparable<T>
         {
-            return value.Clamp(min, max);
+            if (value.CompareTo(max) > 0) return max;
+
+            return value;
         }
     }
 }
