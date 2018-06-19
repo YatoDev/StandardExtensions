@@ -41,6 +41,4 @@ You can contribute to this project by fixing Typos, Documentation and by adding 
 
 ### License
 
-MIT
-
-[NetStandardExtensions License](https://github.com/michel-pi/StandardExtensions/blob/master/LICENSE "NetStandardExtensions License")
+[MIT NetStandardExtensions License](https://github.com/michel-pi/StandardExtensions/blob/master/LICENSE "MIT NetStandardExtensions License")
