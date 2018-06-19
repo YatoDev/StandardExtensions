@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace StandardExtensions
+namespace NetStandardExtensions
 {
     /// <summary>
     /// Provides extension methods to throw exceptions

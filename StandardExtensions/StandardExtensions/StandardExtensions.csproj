@@ -6,6 +6,8 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <AssemblyVersion>1.1.19.6745</AssemblyVersion>
     <FileVersion>1.1.19.6745</FileVersion>
+    <AssemblyName>NetStandardExtensions</AssemblyName>
+    <RootNamespace>NetStandardExtensions</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
