@@ -4,6 +4,9 @@ using System.Text;
 
 namespace StandardExtensions
 {
+    /// <summary>
+    /// Provides extension methods to convert types
+    /// </summary>
     public static class ConvertingExtensions
     {
         /// <summary>

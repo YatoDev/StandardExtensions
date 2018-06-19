@@ -4,6 +4,9 @@ using System.Text;
 
 namespace StandardExtensions
 {
+    /// <summary>
+    /// Provides extension methods to throw exceptions
+    /// </summary>
     public static class ExceptionExtensions
     {
         /// <summary>

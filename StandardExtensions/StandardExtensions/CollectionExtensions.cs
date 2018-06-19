@@ -5,6 +5,9 @@ using System.Text;
 
 namespace StandardExtensions
 {
+    /// <summary>
+    /// Provides extension methods for the <c>ICollection</c> interface
+    /// </summary>
     public static class CollectionExtensions
     {
         /// <summary>

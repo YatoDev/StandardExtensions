@@ -4,6 +4,9 @@ using System.Text;
 
 namespace StandardExtensions
 {
+    /// <summary>
+    /// Provides extension methods for number types
+    /// </summary>
     public static class NumberExtensions
     {
         /// <summary>

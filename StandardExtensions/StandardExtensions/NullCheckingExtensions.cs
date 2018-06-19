@@ -4,6 +4,9 @@ using System.Text;
 
 namespace StandardExtensions
 {
+    /// <summary>
+    /// Provides extension methods for null checking
+    /// </summary>
     public static class NullCheckingExtensions
     {
         /// <summary>

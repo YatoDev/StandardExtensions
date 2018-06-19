@@ -4,6 +4,9 @@ using System.Text;
 
 namespace StandardExtensions
 {
+    /// <summary>
+    /// Provides extension methods for <c>IEnumerable</c>
+    /// </summary>
     public static class EnumerableExtensions
     {
         /// <summary>
