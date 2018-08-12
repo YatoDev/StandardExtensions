@@ -4,8 +4,8 @@
     <TargetFramework>netstandard1.0</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <AssemblyVersion>1.2.19.6745</AssemblyVersion>
-    <FileVersion>1.2.19.6745</FileVersion>
+    <AssemblyVersion>1.3.20.6799</AssemblyVersion>
+    <FileVersion>1.3.20.6799</FileVersion>
     <AssemblyName>NetStandardExtensions</AssemblyName>
     <RootNamespace>NetStandardExtensions</RootNamespace>
   </PropertyGroup>
