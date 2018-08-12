@@ -1,34 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace NetStandardExtensions
 {
     /// <summary>
-    /// Provides extension methods to throw exceptions
+    ///     Provides extension methods to throw exceptions
     /// </summary>
     public static class ExceptionExtensions
     {
         /// <summary>
-        /// Throws an exception whith the text contained in this instance
+        ///     Throws an exception whith the text contained in this instance
         /// </summary>
         /// <param name="str">The string.</param>
         /// <exception cref="Exception">
         /// </exception>
         public static void Throw(this string str)
         {
-            if(string.IsNullOrEmpty(str))
-            {
+            if (string.IsNullOrEmpty(str))
                 throw new Exception();
-            }
-            else
-            {
-                throw new Exception(str);
-            }
+            throw new Exception(str);
         }
 
         /// <summary>
-        /// Throws an exception with type information and an optional exception text
+        ///     Throws an exception with type information and an optional exception text
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="obj">The object.</param>
@@ -37,22 +30,19 @@ namespace NetStandardExtensions
         /// </exception>
         public static void Throw<T>(this T obj, string text = "") where T : class
         {
-            if(obj == null)
+            if (obj == null)
             {
                 if (!string.IsNullOrEmpty(text)) throw new Exception(text);
 
                 throw new Exception();
             }
-            else
-            {
-                if (!string.IsNullOrEmpty(text)) throw new Exception(obj.ToString() + text);
+            if (!string.IsNullOrEmpty(text)) throw new Exception(obj + text);
 
-                throw new Exception(obj.ToString());
-            }
+            throw new Exception(obj.ToString());
         }
 
         /// <summary>
-        /// Throws an exception if the predicate returns true
+        ///     Throws an exception if the predicate returns true
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="obj">The object.</param>
@@ -63,14 +53,12 @@ namespace NetStandardExtensions
         {
             if (predicate == null) throw new ArgumentNullException(nameof(predicate));
 
-            if(predicate(obj))
-            {
+            if (predicate(obj))
                 obj.Throw(text);
-            }
         }
 
         /// <summary>
-        /// Exceutes an action and does not throw on exceptions
+        ///     Exceutes an action and does not throw on exceptions
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="obj">The object.</param>
@@ -85,7 +73,7 @@ namespace NetStandardExtensions
             }
             catch
             {
-
+                // ignored
             }
         }
     }

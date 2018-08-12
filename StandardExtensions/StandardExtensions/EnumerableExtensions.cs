@@ -5,12 +5,12 @@ using System.Text;
 namespace NetStandardExtensions
 {
     /// <summary>
-    /// Provides extension methods for <c>IEnumerable</c>
+    ///     Provides extension methods for <c>IEnumerable</c>
     /// </summary>
     public static class EnumerableExtensions
     {
         /// <summary>
-        /// Clones the specified enumerable
+        ///     Clones the specified enumerable
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="list">The enumerable.</param>
@@ -18,7 +18,7 @@ namespace NetStandardExtensions
         /// <exception cref="ArgumentNullException">list</exception>
         public static IList<T> Clone<T>(this IEnumerable<T> list)
         {
-            if (list == null) throw new ArgumentNullException("list");
+            if (list == null) throw new ArgumentNullException(nameof(list));
 
             IList<T> copy = new List<T>();
 
@@ -29,15 +29,15 @@ namespace NetStandardExtensions
         }
 
         /// <summary>
-        /// Executes an action on every iteration
+        ///     Executes an action on every iteration
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="enumerable">The enumerable.</param>
         /// <param name="action">The action.</param>
         /// <exception cref="ArgumentNullException">
-        /// enumerable
-        /// or
-        /// action
+        ///     enumerable
+        ///     or
+        ///     action
         /// </exception>
         public static void ForEach<T>(this IEnumerable<T> enumerable, Action<T> action)
         {
@@ -49,16 +49,16 @@ namespace NetStandardExtensions
         }
 
         /// <summary>
-        /// Takes all elements for which the predicate is true
+        ///     Takes all elements for which the predicate is true
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="enumerable">The enumerable.</param>
         /// <param name="predicate">The predicate.</param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException">
-        /// enumerable
-        /// or
-        /// predicate
+        ///     enumerable
+        ///     or
+        ///     predicate
         /// </exception>
         public static IEnumerable<T> Take<T>(this IEnumerable<T> enumerable, Predicate<T> predicate)
         {
@@ -66,22 +66,20 @@ namespace NetStandardExtensions
             if (predicate == null) throw new ArgumentNullException(nameof(predicate));
 
             foreach (var item in enumerable)
-            {
                 if (predicate(item)) yield return item;
-            }
         }
 
         /// <summary>
-        /// Takes all elements while the predicate returns true
+        ///     Takes all elements while the predicate returns true
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="enumerable">The enumerable.</param>
         /// <param name="predicate">The predicate.</param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException">
-        /// enumerable
-        /// or
-        /// predicate
+        ///     enumerable
+        ///     or
+        ///     predicate
         /// </exception>
         public static IEnumerable<T> TakeWhile<T>(this IEnumerable<T> enumerable, Predicate<T> predicate)
         {
@@ -97,16 +95,16 @@ namespace NetStandardExtensions
         }
 
         /// <summary>
-        /// Takes all elements until the predicate returns true
+        ///     Takes all elements until the predicate returns true
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="enumerable">The enumerable.</param>
         /// <param name="predicate">The predicate.</param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException">
-        /// enumerable
-        /// or
-        /// predicate
+        ///     enumerable
+        ///     or
+        ///     predicate
         /// </exception>
         public static IEnumerable<T> TakeUntil<T>(this IEnumerable<T> enumerable, Predicate<T> predicate)
         {
@@ -122,7 +120,7 @@ namespace NetStandardExtensions
         }
 
         /// <summary>
-        /// Flattens the enumeration
+        ///     Flattens the enumeration
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="enumerable">The enumerable.</param>
@@ -134,13 +132,13 @@ namespace NetStandardExtensions
         {
             if (enumerable == null) throw new ArgumentNullException(nameof(enumerable));
 
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
 
             foreach (var item in enumerable)
             {
                 if (item == null) throw new NullReferenceException("enumerable.Item");
 
-                sb.Append(item.ToString() + seperator);
+                sb.Append(item + seperator);
             }
 
             return sb.ToString();

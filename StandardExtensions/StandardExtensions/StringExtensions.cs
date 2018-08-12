@@ -1,27 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace NetStandardExtensions
 {
     /// <summary>
-    /// Provides extension methods for strings
+    ///     Provides extension methods for strings
     /// </summary>
     public static class StringExtensions
     {
         /// <summary>
-        /// Converts a string to another type using it's default conversion method
+        ///     Converts a string to another type using it's default conversion method
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="str">The string.</param>
         /// <returns></returns>
         public static T ConvertTo<T>(this string str)
         {
-            return (T)Convert.ChangeType(str, typeof(T));
+            return (T) Convert.ChangeType(str, typeof(T));
         }
 
         /// <summary>
-        /// Tries to convert a string to another type using it's default conversion method
+        ///     Tries to convert a string to another type using it's default conversion method
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="str">The string.</param>
@@ -42,7 +40,7 @@ namespace NetStandardExtensions
         }
 
         /// <summary>
-        /// A shortcut for <c>string.Format</c>
+        ///     A shortcut for <c>string.Format</c>
         /// </summary>
         /// <param name="str">The string.</param>
         /// <param name="args">The arguments.</param>
@@ -53,7 +51,7 @@ namespace NetStandardExtensions
         }
 
         /// <summary>
-        /// A shortcut for <c>string.Concat</c>
+        ///     A shortcut for <c>string.Concat</c>
         /// </summary>
         /// <param name="str">The string.</param>
         /// <param name="array">The array.</param>

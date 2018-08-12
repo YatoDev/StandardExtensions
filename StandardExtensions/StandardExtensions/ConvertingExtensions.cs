@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace NetStandardExtensions
+﻿namespace NetStandardExtensions
 {
     /// <summary>
-    /// Provides extension methods to convert types
+    ///     Provides extension methods to convert types
     /// </summary>
     public static class ConvertingExtensions
     {
         /// <summary>
-        /// Converts any type to a target type
+        ///     Converts any type to a target type
         /// </summary>
         /// <typeparam name="TFrom">The type to convert from.</typeparam>
         /// <typeparam name="TTo">The type to convert to</typeparam>
@@ -18,11 +14,11 @@ namespace NetStandardExtensions
         /// <returns></returns>
         public static TTo Convert<TFrom, TTo>(this TFrom from)
         {
-            return (TTo)System.Convert.ChangeType(from, typeof(TTo));
+            return (TTo) System.Convert.ChangeType(from, typeof(TTo));
         }
 
         /// <summary>
-        /// Tries to convert a type into another
+        ///     Tries to convert a type into another
         /// </summary>
         /// <typeparam name="TFrom">The type to convert from.</typeparam>
         /// <typeparam name="TTo">The type of to.</typeparam>
